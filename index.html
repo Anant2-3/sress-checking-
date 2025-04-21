@@ -1,100 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Detox Survival Kit</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            background-color: #f0f8ff;
-            padding: 0;
-            margin: 0;
-        }
-
-        h1 {
-            color: #2c3e50;
-            margin-top: 50px;
-            animation: fadeIn 2s ease;
-        }
-
-        h2 {
-            font-size: 24px;
-            color: #3498db;
-        }
-
-        .quiz-container {
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ecf0f1;
-            border-radius: 10px;
-            width: 80%;
-            animation: bounceIn 1.5s ease-in-out;
-        }
-
-        .quiz-question {
-            font-size: 20px;
-            color: #34495e;
-        }
-
-        .quiz-answer {
-            margin: 15px;
-            padding: 10px;
-            font-size: 18px;
-            cursor: pointer;
-            border: 2px solid #3498db;
-            background-color: #3498db;
-            color: white;
-            border-radius: 5px;
-        }
-
-        .quiz-answer:hover {
-            background-color: #2980b9;
-        }
-
-        .emoji {
-            font-size: 30px;
-            animation: bounce 1s infinite;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes bounceIn {
-            from { transform: translateY(100%); }
-            to { transform: translateY(0); }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Stress Check</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #388E3C;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-    <h1>Digital Detox Quiz 😌🌱</h1>
-    <div class="quiz-container">
-        <h2>How stressed are you? 🤯</h2>
-        <div class="quiz-question">Do you check your phone within 5 minutes of waking up? 📱</div>
-        <button class="quiz-answer" onclick="detoxAnswer(true)">Yes, all the time! 😅</button>
-        <button class="quiz-answer" onclick="detoxAnswer(false)">Nope, I'm calm 🧘‍♂️</button>
-    </div>
+  <h1>Feeling stressed lately? 😟</h1>
+  <div>
+    <button onclick="showResult('yes')">Yes</button>
+    <button onclick="showResult('no')">No</button>
+  </div>
 
-    <div class="emoji">🦄💻</div>
+  <div id="result"></div>
 
-    <script>
-        function detoxAnswer(answer) {
-            if (answer) {
-                alert("You need a digital detox! 🚫📱");
-            } else {
-                alert("Keep up the good work! 😎 Take more breaks though 🧘‍♂️");
-            }
-        }
-    </script>
+  <script>
+    function showResult(answer) {
+      const result = document.getElementById('result');
+      if (answer === 'yes') {
+        result.innerText = "You might be overworked 😓 Time to take a break!";
+      } else {
+        result.innerText = "Great! Keep hustling but don’t forget to chill 😌🔥";
+      }
+    }
+  </script>
 
 </body>
 </html>
+
