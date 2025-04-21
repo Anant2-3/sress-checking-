@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Stress Check</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #ffecd2, #fcb69f);
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #333;
-    }
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    button:hover {
-      background-color: #388E3C;
-    }
-    #result {
-      margin-top: 30px;
-      font-size: 20px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My First Web Page! 🚀</title>
+    <style>
+        /* Overall Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        /* Header Styling */
+        h1 {
+            font-size: 3em;
+            color: #FF5733;
+            text-shadow: 0 0 15px #FF5733, 0 0 25px #FF5733;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+        
+        /* Text Styling */
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Call-To-Action Button */
+        .cta {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1.3em;
+            box-shadow: 0 0 20px #e74c3c, 0 0 30px #e74c3c;
+            transition: 0.3s ease;
+            animation: bounce 2s infinite alternate;
+        }
+
+        .cta:hover {
+            background-color: #c0392b;
+            box-shadow: 0 0 25px #c0392b, 0 0 35px #c0392b;
+            transform: scale(1.1);
+        }
+
+        /* Animation Effects */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #FF5733, 0 0 20px #FF5733;
+            }
+            100% {
+                text-shadow: 0 0 20px #FF5733, 0 0 40px #FF5733;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Feeling stressed lately? 😟</h1>
-  <div>
-    <button onclick="showResult('yes')">Yes</button>
-    <button onclick="showResult('no')">No</button>
-  </div>
-
-  <div id="result"></div>
-
-  <script>
-    function showResult(answer) {
-      const result = document.getElementById('result');
-      if (answer === 'yes') {
-        result.innerText = "You might be overworked 😓 Time to take a break!";
-      } else {
-        result.innerText = "Great! Keep hustling but don’t forget to chill 😌🔥";
-      }
-    }
-  </script>
+    <h1>🚀 Welcome to My First Web Page! 🌟</h1>
+    <p>Hey! Thanks for visiting my very first web page! 😄 This is where my journey into the world of web development starts — and you're part of it! 🎉</p>
+    <p>I’m building something amazing step by step. Feel free to explore and let me know your thoughts! 💬</p>
+    <p>Keep an eye out for more updates coming soon! 🔥</p>
+    
+    <a href="https://yourwebpagelink.com" class="cta">Click to Explore More 🔥</a>
 
 </body>
 </html>
-
